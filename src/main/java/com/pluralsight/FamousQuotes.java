@@ -7,19 +7,8 @@ import java.util.Scanner;
 public class FamousQuotes {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
-
-   /*     System.out.println("Do want it to be looped yes/no")
-        String name = scanner.nextLine();
-
-        if (name.equalsIgnoreCase("yes"))
-            appRunning = true;
-
-        if (name.equalsIgnoreCase("no"))
-            appRunning = false;
-    */
         boolean appRunning = true;
+
         while (appRunning) {
             try {
 
@@ -55,6 +44,12 @@ public class FamousQuotes {
 
                 System.out.println("You selected the quote: " + quotes.get(index));
                 System.out.println("");
+
+                System.out.println("Do you want to see more then one quotes? (yes/no)"); //asked the user if they want to see more then one quote.
+                String name = input.nextLine();
+
+                if (name.equalsIgnoreCase("no"))
+                    appRunning = false;
 
             } catch (Exception e) {
 
